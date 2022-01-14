@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Pacifico&display=swap");
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.contanier {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em 3em;
+  font-family: "Comfortaa", cursive;
+}
+
+.contanier header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contanier header #icon {
+  -webkit-animation: rotation 8s infinite linear;
+          animation: rotation 8s infinite linear;
+}
+
+.contanier header #icon a {
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #df798a;
+  text-decoration: none;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.contanier header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 1rem 0;
+}
+
+.contanier header nav .navbar {
+  display: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  margin-top: 1rem;
+}
+
+.contanier header nav .navbar li {
+  padding: 1em 0;
+}
+
+.contanier header nav .navbar a {
+  text-decoration: none;
+  color: #df798a;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.contanier header nav .nav-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 20px;
+  width: 30px;
+}
+
+.contanier header nav .nav-toggle .hamburger {
+  height: 5px;
+  width: auto;
+  background-color: #df798a;
+  border-radius: 15px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.contanier header nav .nav-toggle:hover {
+  cursor: pointer;
+}
+
+.contanier header nav .nav-toggle:hover .hamburger {
+  background-color: #eeb7c0;
+}
+
+.contanier header nav .toggled {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  list-style: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+}
+
+.contanier header nav .toggled-btn {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+@media (min-width: 800px) {
+  .contanier header nav .nav-toggle {
+    display: none;
+  }
+  .contanier header nav .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+  }
+  .contanier header nav .navbar li {
+    padding: 0 1em;
+  }
+}
+
+.contanier .intro {
+  font-size: 3rem;
+  color: #df798a;
+  padding: 4rem 0;
+}
+
+@media (min-width: 800px) {
+  .contanier .intro {
+    font-size: 7rem;
+  }
+}
+
+footer {
+  color: #eeb7c0;
+}
+/*# sourceMappingURL=style.css.map */

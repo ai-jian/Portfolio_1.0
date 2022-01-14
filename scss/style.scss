@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Pacifico&display=swap");
+
+//colors
+$colors: (
+  primary: rgb(223, 121, 138),
+  primary-lighten: lighten(rgb(223, 121, 138), 15%),
+  primary-darken: darken(rgb(223, 121, 138), 40%),
+  sencondary: lightgreen,
+);
+
+//font family
+$font-pacifico: "Pacifico", cursive;
+$font-comfortaa: "Comfortaa", cursive;
+
+//padding
+$page-padding: 1em 3em;
+
+//border radius
+$border: 15px;
+
+//responsive
+$desktop: 800px;
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+//functions
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+// -----------------------------------------
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contanier {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: $page-padding;
+  font-family: $font-comfortaa;
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    #icon {
+      a {
+        font-family: $font-pacifico;
+        font-size: 2rem;
+        text-transform: capitalize;
+        color: color(primary);
+        text-decoration: none;
+      }
+      animation: rotation 8s infinite linear;
+    }
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 1rem 0;
+      .navbar {
+        display: none;
+        transition: all 0.5s ease-in-out;
+        margin-top: 1rem;
+        li {
+          padding: 1em 0;
+        }
+        a {
+          text-decoration: none;
+          color: color(primary);
+          text-transform: capitalize;
+          font-weight: bold;
+          font-size: 1.3rem;
+        }
+      }
+      .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 20px;
+        width: 30px;
+        .hamburger {
+          height: 5px;
+          width: auto;
+          background-color: color(primary);
+          border-radius: $border;
+          transition: all 0.5s ease-in-out;
+        }
+        &:hover {
+          cursor: pointer;
+          .hamburger {
+            background-color: color(primary-lighten);
+          }
+        }
+      }
+      .toggled {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        list-style: none;
+        transition: all 0.5s ease-in-out;
+        text-align: center;
+      }
+      .toggled-btn {
+        transform: rotate(45deg);
+      }
+
+      @include desktop {
+        .nav-toggle {
+          display: none;
+        }
+        .navbar {
+          display: flex;
+          list-style: none;
+          li {
+            padding: 0 1em;
+          }
+        }
+      }
+    }
+  }
+
+  .intro {
+    font-size: 3rem;
+    color: color(primary);
+    padding: 4rem 0;
+  }
+
+  @include desktop {
+    .intro {
+      font-size: 7rem;
+    }
+  }
+}
+
+footer {
+  color: color(primary-lighten);
+}
