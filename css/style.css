@@ -1,4 +1,112 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Pacifico&display=swap");
+#contact {
+  color: #df798a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.icon-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.icon-wrapper .social-icon {
+  height: 45px;
+  width: 45px;
+  background-color: #eeb7c0;
+  border-radius: 50%;
+}
+
+#work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5rem 0;
+  height: 100%;
+}
+
+#work .work-wrapper {
+  padding: 5rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: row dense;
+  gap: 1rem;
+}
+
+#work .work-wrapper .project-box {
+  width: 100%;
+  height: 50ch;
+  border-radius: 15px;
+  background-color: #eeb7c0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas: ". . ." ". a ." ". b c";
+}
+
+#work .work-wrapper .project-box:hover {
+  cursor: pointer;
+}
+
+#work .work-wrapper .project-box .subtitle {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 7rem;
+  color: #0d968f;
+}
+
+#work .work-wrapper .project-box .skill-tag {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 html,
 body,
 * {
@@ -9,7 +117,6 @@ body,
 }
 
 .contanier {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,7 +131,7 @@ body,
   font-family: "Comfortaa", cursive;
 }
 
-.contanier header {
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,12 +143,12 @@ body,
           align-items: flex-start;
 }
 
-.contanier header #icon {
+header #icon {
   -webkit-animation: rotation 8s infinite linear;
           animation: rotation 8s infinite linear;
 }
 
-.contanier header #icon a {
+header #icon a {
   font-family: "Pacifico", cursive;
   font-size: 2rem;
   text-transform: capitalize;
@@ -71,7 +178,7 @@ body,
   }
 }
 
-.contanier header nav {
+header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,18 +192,18 @@ body,
   padding: 1rem 0;
 }
 
-.contanier header nav .navbar {
+header nav .navbar {
   display: none;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   margin-top: 1rem;
 }
 
-.contanier header nav .navbar li {
+header nav .navbar li {
   padding: 1em 0;
 }
 
-.contanier header nav .navbar a {
+header nav .navbar a {
   text-decoration: none;
   color: #df798a;
   text-transform: capitalize;
@@ -104,7 +211,7 @@ body,
   font-size: 1.3rem;
 }
 
-.contanier header nav .nav-toggle {
+header nav .nav-toggle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,7 +226,7 @@ body,
   width: 30px;
 }
 
-.contanier header nav .nav-toggle .hamburger {
+header nav .nav-toggle .hamburger {
   height: 5px;
   width: auto;
   background-color: #df798a;
@@ -128,15 +235,15 @@ body,
   transition: all 0.5s ease-in-out;
 }
 
-.contanier header nav .nav-toggle:hover {
+header nav .nav-toggle:hover {
   cursor: pointer;
 }
 
-.contanier header nav .nav-toggle:hover .hamburger {
+header nav .nav-toggle:hover .hamburger {
   background-color: #eeb7c0;
 }
 
-.contanier header nav .toggled {
+header nav .toggled {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,39 +260,60 @@ body,
   text-align: center;
 }
 
-.contanier header nav .toggled-btn {
+header nav .toggled-btn {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
 @media (min-width: 800px) {
-  .contanier header nav .nav-toggle {
+  header nav .nav-toggle {
     display: none;
   }
-  .contanier header nav .navbar {
+  header nav .navbar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     list-style: none;
   }
-  .contanier header nav .navbar li {
+  header nav .navbar li {
     padding: 0 1em;
   }
 }
 
-.contanier .intro {
+section {
+  height: 100vh;
+}
+
+.title {
+  text-align: center;
+  color: #df798a;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+#landing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#landing .intro {
   font-size: 3rem;
   color: #df798a;
-  padding: 4rem 0;
+  padding: 0 0 10rem 0;
 }
 
 @media (min-width: 800px) {
-  .contanier .intro {
+  #landing .intro {
     font-size: 7rem;
   }
 }
 
-footer {
+.contanier footer {
   color: #eeb7c0;
 }
 /*# sourceMappingURL=style.css.map */
