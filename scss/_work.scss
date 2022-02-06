@@ -8,14 +8,38 @@
 
   .work-wrapper {
     padding: $section-padding;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-flow: row dense;
+    display: flex;
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+    //scrollbar
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: red;
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #b30000;
+    }
 
     gap: $grid-gap;
     .project-box {
-      // width: 100%;
-      height: 50ch;
+      min-width: 50%;
+      height: 70vh;
       border-radius: $border;
       background-color: color(primary-lighten);
       display: grid;
