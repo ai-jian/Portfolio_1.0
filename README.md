@@ -18,7 +18,7 @@ Let's draw with one stroke. Enjoy the randomness and have fun! :)
 
 ## Deploy
 
-[Click to play](https://meowwwowo.github.io/Drawing-Board/)
+aijian.work(https://aijian.work)
 
 
 ## Built With 
