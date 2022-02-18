@@ -18,7 +18,7 @@ Let's draw with one stroke. Enjoy the randomness and have fun! :)
 
 ## Deploy
 
-aijian.work(https://aijian.work)
+[aijian.work](https://aijian.work)
 
 
 ## Built With 
