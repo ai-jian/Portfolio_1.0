@@ -219,55 +219,64 @@ header nav .toggled-btn {
 }
 
 #work .work-wrapper .project-box {
-  min-width: 40%;
-  height: 70vh;
+  min-width: 45%;
+  height: 50vh;
   border-radius: 15px;
+  padding: 1.5rem;
   background-color: #eeb7c0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
-      grid-template-areas: ". . ." ". a ." ". b c";
+  -ms-grid-rows: 80%;
+      grid-template-rows: 80%;
+      grid-template-areas: ". . ." "a . b" "c . d";
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 #work .work-wrapper .project-box:hover {
   cursor: pointer;
 }
 
+#work .work-wrapper .project-box .subtitle,
+#work .work-wrapper .project-box .skill-tag {
+  text-align: left;
+}
+
+#work .work-wrapper .project-box .live,
+#work .work-wrapper .project-box .code {
+  text-align: right;
+  text-decoration: none;
+}
+
 #work .work-wrapper .project-box .subtitle {
   -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   grid-area: a;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-transform: uppercase;
-  text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
   color: #0d968f;
 }
 
 #work .work-wrapper .project-box .skill-tag {
   -ms-grid-row: 3;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
+  grid-area: c;
+}
+
+#work .work-wrapper .project-box .live {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
   grid-area: b;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+}
+
+#work .work-wrapper .project-box .code {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: d;
 }
 
 #work ::-webkit-scrollbar {

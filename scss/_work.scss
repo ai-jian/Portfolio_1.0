@@ -15,36 +15,49 @@
 
     gap: $grid-gap;
     .project-box {
-      min-width: 40%;
-      height: 70vh;
+      min-width: 45%;
+      height: 50vh;
       border-radius: $border;
+      padding: 1.5rem;
       background-color: color(primary-lighten);
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: 80%;
       grid-template-areas:
         ". . ."
-        ". a ."
-        ". b c";
+        "a . b"
+        "c . d";
+      align-items: baseline;
       &:hover {
         cursor: pointer;
       }
 
+      .subtitle,
+      .skill-tag {
+        text-align: left;
+      }
+
+      .live,
+      .code {
+        text-align: right;
+        text-decoration: none;
+      }
+
       .subtitle {
         grid-area: a;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         text-transform: uppercase;
-        text-align: center;
-        font-size: 2rem;
+        font-size: 1.5rem;
+        font-weight: bolder;
         color: color(sencondary);
       }
       .skill-tag {
+        grid-area: c;
+      }
+      .live {
         grid-area: b;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
+      }
+      .code {
+        grid-area: d;
       }
     }
   }
