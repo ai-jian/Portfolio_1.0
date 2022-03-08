@@ -1,0 +1,31 @@
+@import "utilities";
+
+//landing intro
+#landing {
+  display: flex;
+  align-items: flex-end;
+  .intro {
+    font-size: 1.9rem;
+    color: color(primary);
+    line-height: 1.5;
+    margin: $page-margin-mobile;
+    position: relative;
+    bottom: 13%;
+  }
+  @include tablet {
+    .intro {
+      font-size: 3rem;
+      margin: $page-margin-tablet;
+    }
+  }
+  @include desktop {
+    .intro {
+      font-size: 5.5rem;
+    }
+  }
+}
+.contanier {
+  footer {
+    color: color(primary-lighten);
+  }
+}

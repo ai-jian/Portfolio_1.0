@@ -1,10 +1,11 @@
 // imports
 // @import "cursor";
-@import "header";
-@import "contact";
-@import "work";
 @import "utilities";
-
+@import "header";
+@import "landing";
+@import "work";
+@import "contact";
+@import "footer";
 // -----------------------------------------
 html,
 body,
@@ -18,7 +19,6 @@ body,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: $page-padding;
   font-family: $font-comfortaa;
 }
 // sections styling
@@ -32,31 +32,4 @@ section {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 3rem;
-}
-
-//landing intro
-#landing {
-  display: flex;
-  align-items: flex-end;
-  .intro {
-    font-size: 2rem;
-    color: color(primary);
-    line-height: 1.3;
-    padding: 0 0 10rem 0;
-  }
-  @include tablet {
-    .intro {
-      font-size: 3rem;
-    }
-  }
-  @include desktop {
-    .intro {
-      font-size: 5.5rem;
-    }
-  }
-}
-.contanier {
-  footer {
-    color: color(primary-lighten);
-  }
 }

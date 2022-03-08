@@ -1,8 +1,13 @@
+@import "utilities";
 //header
 header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  margin: $page-margin-mobile;
+  @include tablet {
+    margin: $page-margin-tablet;
+  }
   #icon {
     a {
       font-family: $font-pacifico;
@@ -25,11 +30,9 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 1rem 0;
     .navbar {
       display: none;
       transition: all 0.5s ease-in-out;
-      margin-top: 1rem;
       li {
         padding: 1em 0;
       }

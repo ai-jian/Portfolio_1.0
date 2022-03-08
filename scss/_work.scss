@@ -1,3 +1,4 @@
+@import "utilities";
 #work {
   display: flex;
   flex-direction: column;
@@ -9,14 +10,15 @@
   .work-wrapper {
     padding: $section-padding;
     display: flex;
+    flex-direction: column;
     position: relative;
     width: 100%;
-    overflow-x: scroll;
+    // overflow-y: scroll;
 
     gap: $grid-gap;
     .project-box {
       min-width: 45%;
-      height: 50vh;
+      height: 70vh;
       border-radius: $border;
       padding: 1.5rem;
       background-color: color(primary-lighten);
@@ -24,9 +26,9 @@
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: 80%;
       grid-template-areas:
-        ". . ."
-        "a . b"
-        "c . d";
+        "c c . "
+        "a a ."
+        "e e d";
       align-items: baseline;
       &:hover {
         cursor: pointer;
@@ -37,12 +39,6 @@
         text-align: left;
       }
 
-      .live,
-      .code {
-        text-align: right;
-        text-decoration: none;
-      }
-
       .subtitle {
         grid-area: a;
         text-transform: uppercase;
@@ -50,14 +46,23 @@
         font-weight: bolder;
         color: color(sencondary);
       }
+      .description {
+        grid-area: e;
+      }
       .skill-tag {
         grid-area: c;
       }
-      .live {
-        grid-area: b;
-      }
-      .code {
+      .links {
         grid-area: d;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        .live,
+        .code {
+          text-decoration: none;
+          color: color(primary);
+        }
       }
     }
   }
