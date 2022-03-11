@@ -1,3 +1,3 @@
 # Portfolio_1.0
 
-Live [aijian.work](aijian.work)
+Live [aijian.work](www.aijian.work)
