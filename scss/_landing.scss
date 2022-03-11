@@ -5,22 +5,22 @@
   display: flex;
   align-items: flex-end;
   .intro {
-    font-size: 1.9rem;
+    font-size: 1.4rem;
     color: color(primary);
     line-height: 1.5;
     margin: $page-margin-mobile;
     position: relative;
-    bottom: 13%;
+    bottom: 5%;
   }
   @include tablet {
     .intro {
-      font-size: 3rem;
+      font-size: 4rem;
       margin: $page-margin-tablet;
     }
   }
   @include desktop {
     .intro {
-      font-size: 5.5rem;
+      font-size: 5rem;
     }
   }
 }

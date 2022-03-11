@@ -10,6 +10,23 @@ function navToggle() {
 
 toggleBtn.addEventListener('click', navToggle);
 
+//fixed header - toggle
+const showAnim = gsap
+    .from(".main-tool-bar", {
+        yPercent: -100,
+        paused: true,
+        duration: 0.2
+    })
+    .progress(1);
+
+ScrollTrigger.create({
+    start: "top top",
+    end: 99999,
+    onUpdate: (self) => {
+        self.direction === -1 ? showAnim.play() : showAnim.reverse();
+    }
+});
+
 
 // // custom cursor
 // const cursor = document.querySelector('#cursor');

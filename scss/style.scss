@@ -23,7 +23,7 @@ body,
 }
 // sections styling
 section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 .title {
@@ -31,5 +31,5 @@ section {
   color: color(primary);
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2rem;
 }

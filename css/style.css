@@ -4,6 +4,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Pacifico&display=swap");
 header {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,12 +20,17 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1rem 1.5rem;
+  z-index: 10;
+  padding: 1rem 1.5rem;
+}
+
+header--scrolled {
+  height: 40px;
 }
 
 @media (min-width: 768px) {
   header {
-    margin: 1.5rem 2rem;
+    padding: 1.5rem 2rem;
   }
 }
 
@@ -169,24 +181,24 @@ header nav .toggled-btn {
 }
 
 #landing .intro {
-  font-size: 1.9rem;
+  font-size: 1.4rem;
   color: #df798a;
   line-height: 1.5;
   margin: 1rem 1.5rem;
   position: relative;
-  bottom: 13%;
+  bottom: 5%;
 }
 
 @media (min-width: 768px) {
   #landing .intro {
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 1.5rem 2rem;
   }
 }
 
 @media (min-width: 1200px) {
   #landing .intro {
-    font-size: 5.5rem;
+    font-size: 5rem;
   }
 }
 
@@ -205,7 +217,7 @@ header nav .toggled-btn {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 5rem 0rem;
+  padding: 2rem 0rem;
   height: 100%;
   width: 100%;
   /* width */
@@ -217,7 +229,7 @@ header nav .toggled-btn {
 }
 
 #work .work-wrapper {
-  padding: 5rem 0rem;
+  padding: 2rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -397,7 +409,7 @@ body,
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 
@@ -406,6 +418,6 @@ section {
   color: #df798a;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 /*# sourceMappingURL=style.css.map */
