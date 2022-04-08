@@ -1,43 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Pacifico&display=swap");
-
-//colors
-$colors: (
-  primary: rgb(223, 121, 138),
-  primary-lighten: lighten(rgb(223, 121, 138), 15%),
-  primary-darken: darken(rgb(223, 121, 138), 40%),
-  sencondary: rgb(13, 150, 143),
-);
-
-//font family
-$font-pacifico: "Pacifico", cursive;
-$font-comfortaa: "Comfortaa", cursive;
-
-//padding
-$page-padding: 1em 3em;
-$section-padding: 5rem 0;
-//border radius
-$border: 15px;
-
-//works gap
-$grid-gap: 1rem;
-
-//responsive
-$desktop: 800px;
-@mixin desktop {
-  @media (min-width: #{$desktop}) {
-    @content;
-  }
-}
-//functions
-@function color($color-name) {
-  @return map-get($colors, $color-name);
-}
-
 // imports
 // @import "cursor";
-@import "contact";
+@import "utilities";
+@import "header";
+@import "landing";
 @import "work";
-
+@import "contact";
+@import "footer";
 // -----------------------------------------
 html,
 body,
@@ -46,133 +14,22 @@ body,
   padding: 0;
   box-sizing: border-box;
 }
-
+// page contanier
 .contanier {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: $page-padding;
   font-family: $font-comfortaa;
 }
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  #icon {
-    a {
-      font-family: $font-pacifico;
-      font-size: 2rem;
-      text-transform: capitalize;
-      color: color(primary);
-      text-decoration: none;
-    }
-    animation: rotation 8s infinite linear;
-  }
-  @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 1rem 0;
-    .navbar {
-      display: none;
-      transition: all 0.5s ease-in-out;
-      margin-top: 1rem;
-      li {
-        padding: 1em 0;
-      }
-      a {
-        text-decoration: none;
-        color: color(primary);
-        text-transform: capitalize;
-        font-weight: bold;
-        font-size: 1.3rem;
-      }
-    }
-    .nav-toggle {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 20px;
-      width: 30px;
-      .hamburger {
-        height: 5px;
-        width: auto;
-        background-color: color(primary);
-        border-radius: $border;
-        transition: all 0.5s ease-in-out;
-      }
-      &:hover {
-        cursor: pointer;
-        .hamburger {
-          background-color: color(primary-lighten);
-        }
-      }
-    }
-    .toggled {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      list-style: none;
-      transition: all 0.5s ease-in-out;
-      text-align: center;
-    }
-    .toggled-btn {
-      transform: rotate(45deg);
-    }
-
-    @include desktop {
-      .nav-toggle {
-        display: none;
-      }
-      .navbar {
-        display: flex;
-        list-style: none;
-        li {
-          padding: 0 1em;
-        }
-      }
-    }
-  }
-}
-
+// sections styling
 section {
-  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
 }
 .title {
   text-align: center;
   color: color(primary);
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 3rem;
-}
-
-//landing intro
-#landing {
-  display: flex;
-  align-items: flex-end;
-  .intro {
-    font-size: 3rem;
-    color: color(primary);
-    padding: 0 0 10rem 0;
-  }
-
-  @include desktop {
-    .intro {
-      font-size: 7rem;
-    }
-  }
-}
-.contanier {
-  footer {
-    color: color(primary-lighten);
-  }
+  font-size: 2rem;
 }

@@ -1,3 +1,4 @@
+@import "utilities";
 #work {
   display: flex;
   flex-direction: column;
@@ -8,43 +9,89 @@
 
   .work-wrapper {
     padding: $section-padding;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-flow: row dense;
-
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
     gap: $grid-gap;
     .project-box {
-      // width: 100%;
-      height: 50ch;
+      min-width: 45%;
+      height: 70vh;
       border-radius: $border;
+      padding: 1.5rem;
       background-color: color(primary-lighten);
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: 80%;
       grid-template-areas:
-        ". . ."
-        ". a ."
-        ". b c";
+        "c c . "
+        "a a ."
+        "e e d";
+      align-items: baseline;
       &:hover {
         cursor: pointer;
       }
 
+      .subtitle,
+      .skill-tag {
+        text-align: left;
+      }
+
       .subtitle {
         grid-area: a;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         text-transform: uppercase;
-        text-align: center;
-        font-size: 2rem;
+        font-size: 1.5rem;
+        font-weight: bolder;
         color: color(sencondary);
       }
+      .description {
+        grid-area: e;
+      }
       .skill-tag {
-        grid-area: b;
+        grid-area: c;
+      }
+      .links {
+        grid-area: d;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: flex-end;
         align-items: flex-end;
+        .live,
+        .code {
+          text-decoration: none;
+          color: color(primary);
+        }
       }
     }
   }
+
+  //scrollbar
+  /* width */
+  ::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(246, 195, 208);
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      to right,
+      color(primary-lighten),
+      color(sencondary)
+    );
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+  }
+
+  scroll-behavior: smooth;
+  scroll-snap-align: center;
 }

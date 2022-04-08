@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Pacifico&display=swap");
+
+//colors
+$colors: (
+  primary: rgb(223, 121, 138),
+  primary-lighten: lighten(rgb(223, 121, 138), 15%),
+  primary-darken: darken(rgb(223, 121, 138), 40%),
+  sencondary: rgb(13, 150, 143),
+);
+
+// shadow
+$shadow: 2px 4px 10px #e1c7cc6b, 4px 6px 10px #cdbec166,
+  -4px -6px 15px #ffffff7b;
+
+//font family
+$font-pacifico: "Pacifico", cursive;
+$font-comfortaa: "Comfortaa", cursive;
+
+//margin
+$page-margin-mobile: 1rem 1.5rem;
+$page-margin-tablet: 1.5rem 2rem;
+$section-padding: 2rem 0rem;
+//border radius
+$border: 15px;
+
+//works gap
+$grid-gap: 1rem;
+
+//responsive
+$tablet: 768px;
+$desktop: 1200px;
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+//functions
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}

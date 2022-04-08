@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ai Jian | Home</title>
+    <title>Ai Jian | Frontend Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="src/favicon.jpg" type="image/x-icon">
   </head>
-  <body>
-    
-      
+  <body> 
       <div class="contanier">
-        <header>
+        <header class='main-tool-bar'>
             <div id="icon"><a href="index.html">ai</a></div>
             <nav>
               <div class="nav-toggle" >
@@ -23,8 +23,7 @@
                 <li class="contact"><a href="#contact">contact</a></li>
               </ul>
             </nav>
-          </header>
-          
+          </header>        
         <main>
           <!-- landing page -->
             <section id="landing">
@@ -36,36 +35,46 @@
 
             <!-- work page -->
             <section id="work">
-              <h2 class="title">Work</h2>
+              <h2 class="title">Selected Works</h2>
               <div class="work-wrapper">
                 <div class="project-box">
                   <h3 class="subtitle">alltron</h3>
-                  <div class="skill-tag">HTML / CSS</div>
-                  <a href="#" class="code"></a>
-                </div>
-                <div class="project-box">
-                  <h3 class="subtitle">memory game</h3>
-                  <div class="skill-tag">HTML / CSS</div>
-                  <a href="#" class="code"></a>
-                </div>
-                <div class="project-box">
-                  <h3 class="subtitle">css layout</h3>
-                  <div class="skill-tag">HTML / CSS</div>
-                  <a href="#" class="code"></a>
+                  <p class="description">A responsive 5 pages static websites for Alltron's company information.</p>
+                  <p class="skill-tag">HTML | CSS</p>
+                  <div class="links">
+                    <a href="#" class="live">See Live</a>
+                    <a href="#" class="code">Source Code</a>
+                  </div>
                 </div>
                 <div class="project-box">
                   <h3 class="subtitle">drawing board</h3>
-                  <div class="skill-tag">HTML / CSS</div>
-                  <a href="#" class="code"></a>
+                  <p class="description">An experimental one stroke drawing board web application build with JavaScript and p5.js library.</p>
+                  <p class="skill-tag">JavaScript | p5.js</p>
+                  <div class="links">
+                    <a href="#" class="live">See Live</a>
+                    <a href="#" class="code">Source Code</a>
+                  </div>
                 </div>
                 <div class="project-box">
-                  <h3 class="subtitle">my portfolio</h3>
-                  <div class="skill-tag">HTML / CSS</div>
-                  <a href="#" class="code"></a>
+                  <h3 class="subtitle">notion widgets</h3>
+                  <p class="description">Embed weathers quotes as customer widgets</p>
+                  <p class="skill-tag">React | Sass | APIs</p>
+                  <div class="links">
+                    <a href="#" class="live">See Live</a>
+                    <a href="#" class="code">Source Code</a>
+                  </div>
                 </div>
-              </div>
-              
-            
+                <div class="project-box">
+                  <h3 class="subtitle">sale leads</h3>
+                  <p class="description">A google chrome extension for store URLs.</p>
+                  <p class="skill-tag">React | Sass | APIs</p>
+                  <div class="links">
+                    <a href="#" class="live">See Live</a>
+                    <a href="#" class="code">Source Code</a>
+                  </div>
+                </div>
+                
+              </div>  
             </section>
 
             <!-- contact page -->
@@ -81,10 +90,10 @@
               </p>
       
               <div class="icon-wrapper">
-                <a class="social-icon github" href="#"></a>
-                <a class="social-icon github" href="#"></a>
-                <a class="social-icon github" href="#"></a>
-                <a class="social-icon github" href="#"></a>
+                <a class="social-icon github" href="ai-jian@github.io"></a>
+                <a class="social-icon linked-in" href="ai-jian@linkedin.com"></a>
+                <a class="social-icon codepen" href="#"></a>
+                <a class="social-icon email" href="aijiandev@gmail.com"></a>
               </div>
               <p class="resume"><a href="#">resume</a>(PDF)</p>
             </section>
@@ -93,7 +102,10 @@
               <p>&copy; 2022 Ai Jian. All rights reserved.</p>
           </footer>
         </div>
+        
           
-    <script src="js/index.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+        <script src="js/index.js"></script>
   </body>
 </html>
