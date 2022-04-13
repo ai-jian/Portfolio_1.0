@@ -1,105 +1,35 @@
-#cursor {
-  position: fixed;
-  z-index: 99;
-  left: 0;
-  top: 0;
+//custom cursor
+.app__cursor {
+  position:fixed;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  border: 3px solid pink;
+  transform-origin: center;
   pointer-events: none;
-  will-change: transform;
-  mix-blend-mode: difference;
+  z-index: 9999;
+  transition-property: width, height;
+  transition-duration: 0.35s;
+  transition-timing-function: ease-in-out;
+  // transition: height .35s ease-in-out;
+  
+}
+.cursor-follower{
+  @extend.app__cursor;
+  width:70px;
+  height: 70px;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .cursor__circle {
-    width: 40px;
-    height: 40px;
-    margin-top: -50%;
-    margin-left: -50%;
-    border-radius: 50%;
-    border: solid 5px rgba(255, 183, 0, 0.776);
-    transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1),
-      background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
-      border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
-      width 0.3s cubic-bezier(0.25, 1, 0.5, 1),
-      height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-  }
-
-  #cursor.arrow .cursor__circle {
-    width: 128px;
-    height: 128px;
-    background-color: #073099;
-    border-color: #073099;
-  }
-
-  #cursor.arrow::after {
-    content: "";
-    position: absolute;
-    left: -50%;
-    top: -50%;
-    width: 100%;
-    height: 100%;
-    background-image: url("https://svgshare.com/i/MzQ.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  //   #cursor.subtle .cursor__circle {
-  //     opacity: 0.16;
-  //   }
-
-  //   #cursor.overlay .cursor__circle {
-  //     width: 48px;
-  //     height: 48px;
-  //     background-color: rgba(227, 222, 193, 0.08);
-  //     border-color: transparent;
-  //   }
+.cursor-grow {
+  width: 160px;
+  height: 160px; 
+  background-color: rgb(0, 0, 255);
+  mix-blend-mode:difference;
+  filter: contrast(120%) brightness(120%) ;
+  border:none;
 }
-
-html,
-body,
-section {
-  width: 100%;
-  height: 100%;
-}
-
-section {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f7f7f7;
-}
-
-.container {
-  width: 33vw;
-}
-
-.image-container {
-  overflow: hidden;
-  cursor: pointer;
-  width: 100%;
-  height: 75%;
-  /*   margin-bottom: 0.5vw; */
-  margin-top: 10vw;
-}
-
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(95%);
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .image-container:hover img {
-    transform: scale(1.1);
-  }
-
-  .underline:hover::after {
-    opacity: 1;
-  }
-
-  section::after {
-    display: none;
-  }
+.grow-small {
+  @extend.cursor-grow;
+  width: 50px;
+  height: 50px;
 }
