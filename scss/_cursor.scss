@@ -1,10 +1,11 @@
+@import "utilities";
 //custom cursor
 .app__cursor {
   position:fixed;
   width:10px;
   height:10px;
   border-radius:50%;
-  border: 3px solid pink;
+  border: 3px solid color(primary);
   transform-origin: center;
   pointer-events: none;
   z-index: 9999;

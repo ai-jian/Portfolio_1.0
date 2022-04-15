@@ -9,14 +9,14 @@
 
   .work-wrapper {
     padding: $section-padding;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(500px, 1fr));
     position: relative;
-    width: 100%;
     gap: $grid-gap;
+    
     .project-box {
-      min-width: 45%;
-      height: 70vh;
+      min-width: 100%;
+      height: 350px;
       border-radius: $border;
       padding: 1.5rem;
       background-color: color(primary-lighten);
@@ -65,32 +65,32 @@
     }
   }
 
-  //scrollbar
-  /* width */
-  ::-webkit-scrollbar {
-    height: 5px;
-  }
+  // //scrollbar
+  // /* width */
+  // ::-webkit-scrollbar {
+  //   height: 5px;
+  // }
 
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px rgb(246, 195, 208);
-    border-radius: 10px;
-  }
+  // /* Track */
+  // ::-webkit-scrollbar-track {
+  //   box-shadow: inset 0 0 5px rgb(246, 195, 208);
+  //   border-radius: 10px;
+  // }
 
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(
-      to right,
-      color(primary-lighten),
-      color(sencondary)
-    );
-    border-radius: 10px;
-  }
+  // /* Handle */
+  // ::-webkit-scrollbar-thumb {
+  //   background: linear-gradient(
+  //     to right,
+  //     color(primary-lighten),
+  //     color(sencondary)
+  //   );
+  //   border-radius: 10px;
+  // }
 
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #b30000;
-  }
+  // /* Handle on hover */
+  // ::-webkit-scrollbar-thumb:hover {
+  //   background: #b30000;
+  // }
 
   scroll-behavior: smooth;
   scroll-snap-align: center;

@@ -13,6 +13,7 @@ body,
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 // page contanier
 .contanier {
@@ -20,6 +21,7 @@ body,
   flex-direction: column;
   justify-content: space-between;
   font-family: $font-comfortaa;
+  font-family: $font-maven;
 }
 // sections styling
 section {
