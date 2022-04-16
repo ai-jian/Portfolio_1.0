@@ -22,6 +22,8 @@ body,
   justify-content: space-between;
   font-family: $font-comfortaa;
   font-family: $font-maven;
+  font-weight:lighter;
+  
 }
 // sections styling
 section {
@@ -34,4 +36,20 @@ section {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 2rem;
+}
+
+.social-icons {
+  position: fixed;
+  z-index: 10;
+  right: 1em;
+  bottom: 20%;
+  display:flex;
+  flex-direction: column;
+  gap:1.5rem;
+  i{
+    font-weight: lighter;
+    color: color(primary);
+    // text-shadow: 0 0 10px green;
+    font-size: 1.5rem;
+  }
 }
