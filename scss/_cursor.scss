@@ -5,8 +5,9 @@
   width:10px;
   height:10px;
   border-radius:50%;
-  border: 3px solid color(primary);
-  background-color: color(primary);
+  border: 1px solid color(primary);
+  box-shadow:0 0 30px rgba(255, 255, 255, 0.5);
+  background: radial-gradient(rgba(255,255,255,0.5), color(primary));
   transform-origin: center;
   pointer-events: none;
   z-index: 9999;

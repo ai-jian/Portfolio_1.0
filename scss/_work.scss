@@ -3,35 +3,43 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: $section-padding;
   height: 100%;
   width: 100%;
-
   // filter:blur(10px) contrast(15);
+
+  .title {
+    margin: 2rem;
+  }
+
   .work-wrapper {
     padding: $section-padding;
+    width: 80%;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
     position: relative;
     gap: $grid-gap;
     padding: 0 4rem;
 
     .project-box {
+      position: relative;
       min-width: 100%;
-      height: 50vh;
+      height: 35vh;
       border-radius: $border;
       padding: 1.5rem;
       background-color: color(primary-lighten);
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 80%;
-      grid-template-areas:
-        "c c . "
-        "a a ."
-        "e e d";
-      align-items: baseline;
+      justify-content: flex-start;
       &:hover {
         cursor: pointer;
+      }
+
+      .project-tag {
+        height:50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: color(sencondary)
       }
 
       .subtitle,
@@ -40,20 +48,17 @@
       }
 
       .subtitle {
-        grid-area: a;
+
         text-transform: uppercase;
         font-size: 1.5rem;
-        font-weight: bolder;
+        font-weight: bold;
         color: color(sencondary);
       }
-      .description {
-        grid-area: e;
-      }
-      .skill-tag {
-        grid-area: c;
-      }
+    
       .links {
-        grid-area: d;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;

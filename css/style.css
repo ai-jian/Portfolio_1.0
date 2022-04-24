@@ -9,8 +9,10 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: 3px solid #df798a;
-  background-color: #df798a;
+  border: 1px solid #df798a;
+  -webkit-box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  background: radial-gradient(rgba(255, 255, 255, 0.5), #df798a);
   -webkit-transform-origin: center;
           transform-origin: center;
   pointer-events: none;
@@ -257,6 +259,9 @@ header nav .toggled-btn {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 2rem 0rem;
   height: 100%;
   width: 100%;
@@ -264,37 +269,45 @@ header nav .toggled-btn {
   scroll-snap-align: center;
 }
 
+#work .title {
+  margin: 2rem;
+}
+
 #work .work-wrapper {
   padding: 2rem 0rem;
+  width: 80%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(500px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   position: relative;
   gap: 1rem;
   padding: 0 4rem;
 }
 
 #work .work-wrapper .project-box {
+  position: relative;
   min-width: 100%;
-  height: 50vh;
+  height: 35vh;
   border-radius: 15px;
   padding: 1.5rem;
   background-color: #eeb7c0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: 80%;
-      grid-template-rows: 80%;
-      grid-template-areas: "c c . " "a a ." "e e d";
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 #work .work-wrapper .project-box:hover {
   cursor: pointer;
+}
+
+#work .work-wrapper .project-box .project-tag {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #0d968f;
 }
 
 #work .work-wrapper .project-box .subtitle,
@@ -303,34 +316,16 @@ header nav .toggled-btn {
 }
 
 #work .work-wrapper .project-box .subtitle {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: a;
   text-transform: uppercase;
   font-size: 1.5rem;
-  font-weight: bolder;
+  font-weight: bold;
   color: #0d968f;
 }
 
-#work .work-wrapper .project-box .description {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: e;
-}
-
-#work .work-wrapper .project-box .skill-tag {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: c;
-}
-
 #work .work-wrapper .project-box .links {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  grid-area: d;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
