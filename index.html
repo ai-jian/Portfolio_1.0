@@ -1,159 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ai Jian | Frontend Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="src/favicon.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="src/favicon.jpg" type="image/x-icon" />
   </head>
-  <body> 
-       
+  <body>
     <!-- cursor -->
     <div class="app__cursor"></div>
     <div class="cursor-follower"></div>
 
-    
+    <!-- header -->
+    <div class="contanier">
+      <header class="main-tool-bar">
+        <div id="icon"><a href="index.html">ai</a></div>
+        <nav>
+          <div class="nav-toggle">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+          </div>
+          <ul class="navbar">
+            <li class="work"><a href="#work">work</a></li>
+            <li class="contact"><a href="#contact">contact</a></li>
+          </ul>
+          <div class="toggle">
+            <input type="checkbox" class="switch_1" name="theme" />
+          </div>
+        </nav>
+      </header>
+      <main>
+        <!-- hero section -->
+        <section id="herosection">
+          <div class="herotext-container">
+            <p class="hero-hi">Hi there!</p>
 
-      <div class="contanier">
-        <header class='main-tool-bar'>
-            <div id="icon"><a href="index.html">ai</a></div>
-            <nav>
-              <div class="nav-toggle" >
-                <div class="hamburger"></div>
-                <div class="hamburger"></div>
+            <div class="hero-intro">
+              <h1 class="hero-name">I'm Ai Jian,</h1>
+              <h2 class="hero-description">
+                a frontend web developer <br />
+                with designer's eyes.
+              </h2>
+            </div>
+
+            <div class="hero-contact">
+              <button class="hero-contactbtn">
+                <a href="#">Get in touch</a>
+              </button>
+              <!-- social icon -->
+              <div class="social-icons">
+                <a target="_blank" href="https://www.linkedin.com/in/ai-jian"
+                  ><i class="fa-regular fa-envelope"></i
+                ></a>
+                <a target="_blank" href="https://www.linkedin.com/in/ai-jian"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+                <a target="_blank" href="https://github.com/ai-jian"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a target="_blank" href="https://codepen.io/meowwwowo"
+                  ><i class="fa-brands fa-codepen"></i
+                ></a>
               </div>
-              <ul class="navbar">
-                <li class="work"><a href="#work">work</a></li>
-                <li class="contact"><a href="#contact">contact</a></li>
-              </ul>
-            </nav>
-          </header>        
-        <main>
-          <!-- hero section -->
-            <sechero-tion id="hero">
-                <p class="hero-hi">Hi there!</p>
-                <h1 class="hero-name">I'am Ai Jian</h1>
-                <h2 class="hero-description">a frontend web developer <br/>
-                with designer's eyes. </h2>
-                <button class="hero-contact">Get in touch</button>
-                <!-- social icon -->
-                <div class="social-icons">
-                  <a target="_blank" href="https://codepen.io/meowwwowo"><i class="fa-brands fa-codepen"></i></a>
-                  <a target="_blank" href="https://github.com/ai-jian"><i class="fa-brands fa-github"></i></a>
-                  <a target="_blank" href="https://www.linkedin.com/in/ai-jian"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-            </section>
+            </div>
+          </div>
+        </section>
 
-            <!-- work page -->
-            <section id="work">
-              <h2 class="title">Selected Works</h2>
-              <div class="work-wrapper">
-                <!-- project1 -->
-                <div class="project-box">
-                  <div class="project-tag"></div>
-                  <h3 class="subtitle">my portfolio</h3>
-                  <p class="description">
-                    A high-performance, Responsive website that uses the power of creative SVG, Greensock (GSAP) & ScrollMagic powered animations for enriching user experience.</p>
-                  <p class="skill-tag">HTML | CSS | GSAP</p>
-                  <div class="links">
-                    <a href="#" class="live">See Live</a>
-                    <a href="#" class="code">Source Code</a>
-                  </div>
-                </div>
-                <!-- project2 -->
-                <div class="project-box">
-                  <div class="project-tag"></div>
-                  <h3 class="subtitle">sale leads</h3>
-                  <p class="description">A google chrome extension for store URLs.</p>
-                  <p class="skill-tag">React | Sass | APIs</p>
-                  <div class="links">
-                    <a href="#" target="_blank" class="live">See Live</a>
-                    <a href="#" target="_blank" class="code">Source Code</a>
-                  </div>
-                </div>
-                <!-- project3 -->
-                <div class="project-box">
-                  <div class="project-tag"></div>
-                  <h3 class="subtitle">alltron</h3>
-                  <p class="description">A responsive 5 pages static websites for Alltron's company information.</p>
-                  <p class="skill-tag">HTML | CSS</p>
-                  <div class="links">
-                    <a href="#" class="live">See Live</a>
-                    <a href="#" class="code">Source Code</a>
-                  </div>
-                </div>
-                <!-- project4 -->
-                <div class="project-box">
-                  <div class="project-tag"></div>
-                  <h3 class="subtitle">drawing board</h3>
-                  <p class="description">An experimental one stroke drawing board web application build with JavaScript and p5.js library.</p>
-                  <p class="skill-tag">JavaScript | p5.js</p>
-                  <div class="links">
-                    <a href="https://www.alltronllc.com/" target="_blank" class="live">See Live</a>
-                    <a href="#" target="_blank" class="code">Source Code</a>
-                  </div>
-                </div>
-                <!-- project5 -->
-                <div class="project-box">
-                  <div class="project-tag"></div>
-                  <h3 class="subtitle">notion widgets</h3>
-                  <p class="description">Embeddable widgets for Notion.</p>
-                  <p class="skill-tag">React | Sass | APIs</p>
-                  <div class="links">
-                    <a href="#" target="_blank" class="live">See Live</a>
-                    <a href="#" target="_blank" class="code">Source Code</a>
-                  </div>
-                </div>
-                <!-- project6 -->
-                <div class="project-box">
-                  <div class="project-tag"></div>
-                  <h3 class="subtitle">ACareer</h3>
-                  <p class="description">A remote job search site</p>
-                  <p class="skill-tag">React | Sass | APIs</p>
-                  <div class="links">
-                    <a href="#" target="_blank" class="live">See Live</a>
-                    <a href="#" target="_blank" class="code">Source Code</a>
-                  </div>
-                </div>
-                
-                
-              </div>  
-            </section>
-
-            <!-- contact page -->
-            <section id="contact">
-              <h2 class="title">contact me</h2>
-              <p>
-                I am Ai Jian, a fronted developer based in Austin TX, producing
-                interactive and responsive websites. Ai is a frontend web developer who has been always curious about new
-                technologies, loves all things aesthetically pleasing, and makes
-                visuals come to life and react on screen.
+        <!-- work page -->
+        <section id="work">
+          <h2 class="title">Selected Works</h2>
+          <div class="work-wrapper">
+            <!-- project1 -->
+            <div class="project-box">
+              <div class="project-tag"></div>
+              <h3 class="subtitle">my portfolio</h3>
+              <p class="description">
+                A high-performance, Responsive website that uses the power of
+                creative SVG, Greensock (GSAP) & ScrollMagic powered animations
+                for enriching user experience.
               </p>
-              <p>
-                Feel free to send me an email at any time. I'm looking forward to work
-                with you.
-              </p>
-      
-              <div class="icon-wrapper">
-                <a class="social-icon github" href="ai-jian@github.io"></a>
-                <a class="social-icon linked-in" href="ai-jian@linkedin.com"></a>
-                <a class="social-icon codepen" href="#"></a>
-                <a class="social-icon email" href="aijiandev@gmail.com"></a>
+              <p class="skill-tag">HTML | CSS | GSAP</p>
+              <div class="links">
+                <a href="#" class="live">See Live</a>
+                <a href="#" class="code">Source Code</a>
               </div>
-              <p class="resume"><a href="#">resume</a>(PDF)</p>
-            </section>
-          </main>
-          <footer>
-              <p>&copy; 2022 Ai Jian. All rights reserved.</p>
-          </footer>
-        </div>
-        
-          
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-        <script src="js/index.js"></script>
+            </div>
+            <!-- project2 -->
+            <div class="project-box">
+              <div class="project-tag"></div>
+              <h3 class="subtitle">sale leads</h3>
+              <p class="description">
+                A google chrome extension for store URLs.
+              </p>
+              <p class="skill-tag">React | Sass | APIs</p>
+              <div class="links">
+                <a href="#" target="_blank" class="live">See Live</a>
+                <a href="#" target="_blank" class="code">Source Code</a>
+              </div>
+            </div>
+            <!-- project3 -->
+            <div class="project-box">
+              <div class="project-tag"></div>
+              <h3 class="subtitle">alltron</h3>
+              <p class="description">
+                A responsive 5 pages static websites for Alltron's company
+                information.
+              </p>
+              <p class="skill-tag">HTML | CSS</p>
+              <div class="links">
+                <a href="#" class="live">See Live</a>
+                <a href="#" class="code">Source Code</a>
+              </div>
+            </div>
+            <!-- project4 -->
+            <div class="project-box">
+              <div class="project-tag"></div>
+              <h3 class="subtitle">drawing board</h3>
+              <p class="description">
+                An experimental one stroke drawing board web application build
+                with JavaScript and p5.js library.
+              </p>
+              <p class="skill-tag">JavaScript | p5.js</p>
+              <div class="links">
+                <a
+                  href="https://www.alltronllc.com/"
+                  target="_blank"
+                  class="live"
+                  >See Live</a
+                >
+                <a href="#" target="_blank" class="code">Source Code</a>
+              </div>
+            </div>
+            <!-- project5 -->
+            <div class="project-box">
+              <div class="project-tag"></div>
+              <h3 class="subtitle">notion widgets</h3>
+              <p class="description">Embeddable widgets for Notion.</p>
+              <p class="skill-tag">React | Sass | APIs</p>
+              <div class="links">
+                <a href="#" target="_blank" class="live">See Live</a>
+                <a href="#" target="_blank" class="code">Source Code</a>
+              </div>
+            </div>
+            <!-- project6 -->
+            <div class="project-box">
+              <div class="project-tag"></div>
+              <h3 class="subtitle">ACareer</h3>
+              <p class="description">A remote job search site</p>
+              <p class="skill-tag">React | Sass | APIs</p>
+              <div class="links">
+                <a href="#" target="_blank" class="live">See Live</a>
+                <a href="#" target="_blank" class="code">Source Code</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- contact page -->
+        <section id="contact">
+          <h2 class="title">contact me</h2>
+          <p>
+            I am Ai Jian, a fronted developer based in Austin TX, producing
+            interactive and responsive websites. Ai is a frontend web developer
+            who has been always curious about new technologies, loves all things
+            aesthetically pleasing, and makes visuals come to life and react on
+            screen.
+          </p>
+          <p>
+            Feel free to send me an email at any time. I'm looking forward to
+            work with you.
+          </p>
+
+          <div class="icon-wrapper">
+            <a class="social-icon github" href="ai-jian@github.io"></a>
+            <a class="social-icon linked-in" href="ai-jian@linkedin.com"></a>
+            <a class="social-icon codepen" href="#"></a>
+            <a class="social-icon email" href="aijiandev@gmail.com"></a>
+          </div>
+          <p class="resume"><a href="#">resume</a>(PDF)</p>
+        </section>
+      </main>
+      <footer>
+        <p>&copy; 2022 Ai Jian. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

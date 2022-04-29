@@ -4,6 +4,107 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Maven+Pro:wght@400;700;900&family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Maven+Pro:wght@400;700;900&family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Maven+Pro:wght@400;700;900&family=Pacifico&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: none;
+}
+
+html[data-theme="light"] {
+  --bg: rgb(236, 236, 236);
+  --bg-panel: #fafafa;
+  --color-headings: #e9709c;
+  --color-text: #4b4949;
+}
+
+html[data-theme="dark"] {
+  --bg:  #4b4949;
+  --bg-panel:  #f382ac;
+  --color-headings: rgb(250, 225, 225);
+  --color-text: #fafafa;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  position: absolute;
+  background-color: var(--bg-panel);
+  margin: 5rem;
+  padding: 5rem;
+  border-radius: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% auto;
+      grid-template-columns: 80% auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+      grid-template-areas: "title toggle" "content content";
+}
+
+.container h1 {
+  color: var(--color-headings);
+}
+
+.container p {
+  color: var(--color-text);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+/* Switch 1 Specific Styles Start */
+.switch_1 {
+  font-size: 2rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 1.5em;
+  height: 1em;
+  background: var(--bg);
+  border-radius: 3em;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+}
+
+.switch_1:checked {
+  background: var(--color-headings);
+}
+
+.switch_1:after {
+  position: absolute;
+  content: "";
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: var(--bg-panel);
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.05);
+  -webkit-transform: scale(0.88);
+          transform: scale(0.88);
+  left: 0;
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+}
+
+.switch_1:checked:after {
+  left: calc(100% - 1em);
+}
+
+html.transition * {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
 .app__cursor, .cursor-follower {
   position: fixed;
   width: 10px;
@@ -213,39 +314,126 @@ header nav .toggled-btn {
   }
 }
 
-#landing {
+#herosection {
+  height: 100vh;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-#landing .intro {
-  font-size: 1.4rem;
-  color: #df798a;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Comfortaa", cursive;
+  font-weight: bold;
   line-height: 1.5;
-  margin: 1rem 1.5rem;
   position: relative;
-  bottom: 5%;
 }
 
 @media (min-width: 768px) {
-  #landing .intro {
-    font-size: 4rem;
-    margin: 1.5rem 2rem;
+  #herosection {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+#herosection .herotext-container {
+  width: 100%;
+  height: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: #df798a;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 10%;
+  bottom: 15%;
+}
+
+@media (min-width: 768px) {
+  #herosection .herotext-container {
+    left: 15%;
   }
 }
 
 @media (min-width: 1200px) {
-  #landing .intro {
-    font-size: 5rem;
+  #herosection .herotext-container {
+    height: 65%;
+    bottom: 10%;
   }
 }
 
-.contanier footer {
-  color: #eeb7c0;
+#herosection .herotext-container .hero-hi {
+  font-size: 1.2rem;
+}
+
+#herosection .herotext-container .hero-description {
+  font-size: 1.2rem;
+}
+
+#herosection .herotext-container .hero-contactbtn {
+  width: 70%;
+  background-color: #df798a;
+  border: none;
+  border-radius: 2rem;
+  padding: .5rem 1.5rem;
+}
+
+#herosection .herotext-container .hero-contactbtn a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+#herosection .herotext-container .social-icons {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+  margin-top: 1rem;
+}
+
+#herosection .herotext-container .social-icons i {
+  font-weight: lighter;
+  color: #df798a;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 1200px) {
+  #herosection .herotext-container {
+    font-size: 3rem;
+  }
+  #herosection .herotext-container .hero-hi {
+    font-size: 2rem;
+  }
+  #herosection .herotext-container .hero-description {
+    font-size: 2.5rem;
+  }
+  #herosection .herotext-container .hero-contactbtn a {
+    font-size: 2rem;
+  }
+  #herosection .herotext-container .social-icons {
+    margin-top: 0;
+    font-size: 2rem;
+  }
 }
 
 #work {
@@ -430,26 +618,5 @@ section {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 2rem;
-}
-
-.social-icons {
-  position: fixed;
-  z-index: 10;
-  right: 1em;
-  bottom: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 1.5rem;
-}
-
-.social-icons i {
-  font-weight: lighter;
-  color: #df798a;
-  font-size: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */
