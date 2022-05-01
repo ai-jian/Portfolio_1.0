@@ -25,12 +25,13 @@
   position:relative;
   left: 10%;
 
-  height: 30ch;
+  height: 32ch;
   width: 80%;
   
   @include tablet {
     left:15%;
     width: 55%;
+    height: 27ch;
   }
   
   //work title

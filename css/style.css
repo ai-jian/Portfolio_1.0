@@ -344,7 +344,7 @@ header nav .toggled-btn {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 45%;
+  height: 25ch;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -373,7 +373,7 @@ header nav .toggled-btn {
 
 @media (min-width: 1200px) {
   #herosection .herotext-container {
-    height: 65%;
+    height: 20ch;
     bottom: 10%;
   }
 }
@@ -475,7 +475,7 @@ header nav .toggled-btn {
   line-height: 1.5;
   position: relative;
   left: 10%;
-  height: 30ch;
+  height: 32ch;
   width: 80%;
 }
 
@@ -483,6 +483,7 @@ header nav .toggled-btn {
   .swork-container {
     left: 15%;
     width: 55%;
+    height: 27ch;
   }
 }
 

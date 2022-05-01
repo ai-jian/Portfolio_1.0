@@ -18,7 +18,7 @@
 
   .herotext-container {
     width:fit-content;
-    height: 45%;
+    height: 25ch;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,7 +33,7 @@
       left:15%;
     }
     @include desktop {
-      height:65%;
+      height:20ch;
       bottom:10%;
     }
     
