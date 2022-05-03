@@ -637,6 +637,7 @@ header nav .toggled-btn {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  line-height: 1.5;
 }
 
 #contact p {
@@ -646,6 +647,7 @@ header nav .toggled-btn {
 @media (min-width: 768px) {
   #contact p {
     width: 50%;
+    font-size: 1.3rem;
   }
 }
 
@@ -660,10 +662,19 @@ header nav .toggled-btn {
 }
 
 .icon-wrapper .social-icon {
-  height: 45px;
-  width: 45px;
-  background-color: #eeb7c0;
-  border-radius: 50%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+  margin-top: 1rem;
+}
+
+.icon-wrapper .social-icon i {
+  font-weight: lighter;
+  color: #df798a;
+  font-size: 1.5rem;
 }
 
 footer {
