@@ -11,21 +11,21 @@ function navToggle() {
 toggleBtn.addEventListener('click', navToggle);
 
 //fixed header - toggle
-const showAnim = gsap
-    .from(".main-tool-bar", {
-        yPercent: -100,
-        paused: true,
-        duration: 0.2
-    })
-    .progress(1);
+// const showAnim = gsap
+//     .from(".main-tool-bar", {
+//         yPercent: -100,
+//         paused: true,
+//         duration: 0.2
+//     })
+//     .progress(1);
 
-ScrollTrigger.create({
-    start: "top top",
-    end: 99999,
-    onUpdate: (self) => {
-        self.direction === -1 ? showAnim.play() : showAnim.reverse();
-    }
-});
+// ScrollTrigger.create({
+//     start: "top top",
+//     end: 99999,
+//     onUpdate: (self) => {
+//         self.direction === -1 ? showAnim.play() : showAnim.reverse();
+//     }
+// });
 
 // light / dark mode
 const checkbox = document.querySelector("input[name=theme]");

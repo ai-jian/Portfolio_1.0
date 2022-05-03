@@ -5,6 +5,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  
+  p {
+    width: 80%;
+
+    @include tablet {
+      width:50%;
+    }
+  }
 }
 
 .icon-wrapper {

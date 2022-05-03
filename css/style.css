@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Maven+Pro:wght@400;700;900&family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Maven+Pro:wght@400;700;900&family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Maven+Pro:wght@400;700;900&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Maven+Pro:wght@400;700;900&family=Pacifico&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -31,35 +32,9 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.container {
-  position: absolute;
-  background-color: var(--bg-panel);
-  margin: 5rem;
-  padding: 5rem;
-  border-radius: 15px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 80% auto;
-      grid-template-columns: 80% auto;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
-      grid-template-areas: "title toggle" "content content";
-}
-
-.container h1 {
-  color: var(--color-headings);
-}
-
-.container p {
-  color: var(--color-text);
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin-top: 1rem;
-}
-
 /* Switch 1 Specific Styles Start */
 .switch_1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -74,6 +49,13 @@ body {
           box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.1);
   -webkit-transition: all .35s ease-in-out;
   transition: all .35s ease-in-out;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .switch_1 {
+    display: inline;
+  }
 }
 
 .switch_1:checked {
@@ -163,12 +145,16 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 2;
   padding: 1rem 1.5rem;
 }
 
 header--scrolled {
-  height: 40px;
+  height: 25px;
 }
 
 @media (min-width: 768px) {
@@ -220,9 +206,19 @@ header nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  header nav {
+    position: absolute;
+    left: 15%;
+  }
 }
 
 header nav .navbar {
@@ -239,8 +235,7 @@ header nav .navbar a {
   text-decoration: none;
   color: #df798a;
   text-transform: capitalize;
-  font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 header nav .nav-toggle {
@@ -291,7 +286,9 @@ header nav .toggled {
   transition: all 0.5s ease-in-out;
   text-align: center;
   position: absolute;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
+  right: 3ch;
+  font-weight: bold;
 }
 
 header nav .toggled-btn {
@@ -299,7 +296,7 @@ header nav .toggled-btn {
           transform: rotate(45deg);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   header nav .nav-toggle {
     display: none;
   }
@@ -310,7 +307,7 @@ header nav .toggled-btn {
     list-style: none;
   }
   header nav .navbar li {
-    padding: 0 1em;
+    padding-right: 1em;
   }
 }
 
@@ -442,11 +439,21 @@ header nav .toggled-btn {
   min-height: 100vh;
   width: 100vw;
   position: relative;
+  line-height: 1.5;
+}
+
+.work-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .selected-works {
-  position: absolute;
-  top: 35%;
+  margin-top: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -472,7 +479,6 @@ header nav .toggled-btn {
       -ms-flex-align: start;
           align-items: flex-start;
   font-size: 1rem;
-  line-height: 1.5;
   position: relative;
   left: 10%;
   height: 32ch;
@@ -548,6 +554,74 @@ header nav .toggled-btn {
   }
 }
 
+.regular-works {
+  margin: 30ch;
+  min-height: 100vh;
+  width: 80%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(35ch, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
+  -ms-grid-rows: (minmax(2ch, 28ch))[auto-fit];
+      grid-template-rows: repeat(auto-fit, minmax(2ch, 28ch));
+  gap: 2rem;
+  -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.regular-works .rwork-container {
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding: 1.5rem 1rem;
+  border: 2px solid #df798a;
+  border-radius: 1rem;
+  height: 28ch;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+}
+
+.regular-works .rwork-container .work-title {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+
+.regular-works .rwork-container .work-tag {
+  font-weight: bold;
+  color: #df798a;
+}
+
+.regular-works .rwork-container .rwork-links {
+  background-color: var(--bg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  bottom: 10%;
+  right: -1ch;
+  padding: .5rem 0;
+}
+
+.regular-works .rwork-container .rwork-links i {
+  color: #df798a;
+}
+
 #contact {
   color: #df798a;
   display: -webkit-box;
@@ -563,6 +637,16 @@ header nav .toggled-btn {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+#contact p {
+  width: 80%;
+}
+
+@media (min-width: 768px) {
+  #contact p {
+    width: 50%;
+  }
 }
 
 .icon-wrapper {
@@ -592,6 +676,9 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 5vh;
+  color: #df798a;
+  font-size: .8rem;
 }
 
 html,
