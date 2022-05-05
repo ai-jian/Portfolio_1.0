@@ -95,7 +95,7 @@
 
 // regular works
 .regular-works {
-  margin: 30ch;
+  margin-top: 30ch;
   min-height:100vh;
   width:80%;
   display: grid;
@@ -132,12 +132,14 @@
       background-color: var(--bg);
       display: flex;
       flex-direction: column;
+      // justify-content: space-between;
       position: absolute;
       bottom:10%;
       right:-1ch;
       padding: .5rem 0;
       i {
         color: color(primary);
+        padding: .5rem 0;
       }
     }
   }

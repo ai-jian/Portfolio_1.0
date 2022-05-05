@@ -1,0 +1,57 @@
+@import 'utilities';
+#playground {
+    display: flex;
+    flex-direction: column;
+    color: color(primary);
+}
+.sketches {
+    font-size: 1rem;
+    min-height:100vh;
+    width:80%;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(24em,1fr));
+    // grid-template-rows:repeat(auto-fit, minmax(2em,24em));
+    // gap:2rem;
+    align-self: center;
+    
+}
+.sketch-wrapper {
+    margin:1rem;
+    width: 24em;
+    height: fit-content;
+    position:relative;
+    // border: 2px solid color(primary);
+    // border-radius: 1rem;
+ 
+    
+    .sketch-canvas {
+        position: relative;
+        overflow: hidden;
+        width:100%;
+        padding-bottom: 100%;
+        margin-bottom: 1em;
+        border-radius:1rem;
+        z-index: 1;
+        box-shadow: 0 0 10px rgba(251, 210, 210, 0.5);
+        iframe {
+            position: absolute;
+            height:130%;
+            width:105%;
+            top: -17.5%;
+            left: -2.5%;
+            overflow: hidden;
+        }
+    }
+    .skill-tags{
+        font-size:.8em;
+        font-weight: bold;
+    }
+    .sketch-links {
+        position: absolute;
+        right:0;
+        bottom:0;
+        .sketch-link{
+        color: color(primary);
+        }   
+    }
+}

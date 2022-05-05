@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Maven+Pro:wght@400;700;900&family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Maven+Pro:wght@400;700;900&family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Maven+Pro:wght@400;700;900&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Maven+Pro:wght@400;700;900&family=Pacifico&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -555,7 +556,7 @@ header nav .toggled-btn {
 }
 
 .regular-works {
-  margin: 30ch;
+  margin-top: 30ch;
   min-height: 100vh;
   width: 80%;
   display: -ms-grid;
@@ -619,6 +620,75 @@ header nav .toggled-btn {
 }
 
 .regular-works .rwork-container .rwork-links i {
+  color: #df798a;
+  padding: .5rem 0;
+}
+
+#playground {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #df798a;
+}
+
+.sketches {
+  font-size: 1rem;
+  min-height: 100vh;
+  width: 80%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(24em, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+  -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.sketch-wrapper {
+  margin: 1rem;
+  width: 24em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+.sketch-wrapper .sketch-canvas {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 100%;
+  margin-bottom: 1em;
+  border-radius: 1rem;
+  z-index: 1;
+  -webkit-box-shadow: 0 0 10px rgba(251, 210, 210, 0.5);
+          box-shadow: 0 0 10px rgba(251, 210, 210, 0.5);
+}
+
+.sketch-wrapper .sketch-canvas iframe {
+  position: absolute;
+  height: 130%;
+  width: 105%;
+  top: -17.5%;
+  left: -2.5%;
+  overflow: hidden;
+}
+
+.sketch-wrapper .skill-tags {
+  font-size: .8em;
+  font-weight: bold;
+}
+
+.sketch-wrapper .sketch-links {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.sketch-wrapper .sketch-links .sketch-link {
   color: #df798a;
 }
 
