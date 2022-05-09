@@ -11,7 +11,6 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  cursor: none;
 }
 
 html[data-theme="light"] {
@@ -88,14 +87,15 @@ html.transition * {
   transition: all .5s ease;
 }
 
-.app__cursor, .cursor-follower {
+.app__cursor {
   position: fixed;
-  width: 10px;
-  height: 10px;
+  font-size: .5rem;
+  width: 1em;
+  height: 1em;
   border-radius: 50%;
-  border: 1px solid #df798a;
-  -webkit-box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
-          box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  border: 0.13em solid #df798a;
+  -webkit-box-shadow: 0 0 0.5em rgba(245, 161, 217, 0.5);
+          box-shadow: 0 0 0.5em rgba(245, 161, 217, 0.5);
   background: radial-gradient(rgba(255, 255, 255, 0.5), #df798a);
   -webkit-transform-origin: center;
           transform-origin: center;
@@ -107,11 +107,6 @@ html.transition * {
           transition-duration: 0.35s;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
-}
-
-.cursor-follower {
-  width: 70px;
-  height: 70px;
 }
 
 .cursor-grow, .grow-small {
@@ -236,6 +231,7 @@ header nav .navbar a {
   text-decoration: none;
   color: #df798a;
   text-transform: capitalize;
+  font-weight: bold;
   font-size: 1rem;
 }
 
@@ -384,20 +380,6 @@ header nav .toggled-btn {
   font-size: 1.2rem;
 }
 
-#herosection .herotext-container .hero-contactbtn {
-  width: 70%;
-  background-color: #df798a;
-  border: none;
-  border-radius: 2rem;
-  padding: .5rem 1.5rem;
-}
-
-#herosection .herotext-container .hero-contactbtn a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.2rem;
-}
-
 #herosection .herotext-container .social-icons {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -480,9 +462,11 @@ header nav .toggled-btn {
       -ms-flex-align: start;
           align-items: flex-start;
   font-size: 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
   position: relative;
   left: 10%;
-  height: 32ch;
+  height: 42ch;
   width: 80%;
 }
 
@@ -519,16 +503,16 @@ header nav .toggled-btn {
 .swork-container .work-tag {
   font-weight: bold;
   color: #df798a;
+  position: relative;
 }
 
 .swork-container .swork-links {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1rem;
   left: 0;
-  bottom: -10%;
+  bottom: 0%;
 }
 
 .swork-container .swork-links .work-link {
@@ -538,8 +522,9 @@ header nav .toggled-btn {
 
 @media (min-width: 768px) {
   .swork-container .swork-links {
-    right: 0;
-    bottom: 0;
+    position: absolute;
+    right: 1.5rem;
+    bottom: 3ch;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -633,18 +618,30 @@ header nav .toggled-btn {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #df798a;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 6rem;
 }
 
 .sketches {
   font-size: 1rem;
   min-height: 100vh;
-  width: 80%;
+  width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(24em, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+  -ms-grid-columns: (minmax(12em, 15.5em))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(12em, 15.5em));
   -ms-grid-row-align: center;
       align-self: center;
+}
+
+@media (min-width: 768px) {
+  .sketches {
+    width: 80%;
+    -ms-grid-rows: (minmax(2em, 17em))[auto-fit];
+        grid-template-rows: repeat(auto-fit, minmax(2em, 17em));
+  }
 }
 
 .sketch-wrapper {
@@ -654,6 +651,15 @@ header nav .toggled-btn {
   height: -moz-fit-content;
   height: fit-content;
   position: relative;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+@media (min-width: 768px) {
+  .sketch-wrapper {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
 }
 
 .sketch-wrapper .sketch-canvas {
@@ -671,14 +677,15 @@ header nav .toggled-btn {
 .sketch-wrapper .sketch-canvas iframe {
   position: absolute;
   height: 130%;
-  width: 105%;
+  width: 105.5%;
   top: -17.5%;
   left: -2.5%;
   overflow: hidden;
+  z-index: -1;
 }
 
 .sketch-wrapper .skill-tags {
-  font-size: .8em;
+  font-size: 1.2em;
   font-weight: bold;
 }
 
@@ -690,6 +697,7 @@ header nav .toggled-btn {
 
 .sketch-wrapper .sketch-links .sketch-link {
   color: #df798a;
+  margin: 0 .5em;
 }
 
 #contact {
@@ -747,6 +755,16 @@ header nav .toggled-btn {
   font-size: 1.5rem;
 }
 
+.contact-email {
+  color: #df798a;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-email:hover {
+  text-decoration: underline;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -796,7 +814,60 @@ section {
   text-align: center;
   color: #df798a;
   text-transform: uppercase;
+  text-align: center;
   font-weight: bold;
   font-size: 2rem;
+}
+
+.btn {
+  width: 70%;
+  background-color: #df798a;
+  border: none;
+  border-radius: 2rem;
+  padding: .5rem 1.5rem;
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+}
+
+.btn a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Comfortaa", cursive;
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 15px 5px rgba(251, 189, 200, 0.4);
+          box-shadow: 0 0 15px 5px rgba(251, 189, 200, 0.4);
+}
+
+.btn:hover a {
+  color: #df798a;
+}
+
+.social-icon i {
+  padding: .2rem;
+  border-radius: 1rem;
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+}
+
+.social-icon i:hover {
+  -webkit-box-shadow: 0 0 15px 5px rgba(251, 189, 200, 0.4);
+          box-shadow: 0 0 15px 5px rgba(251, 189, 200, 0.4);
+}
+
+.light-shadow {
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.light-shadow:hover {
+  -webkit-box-shadow: 0 0 15px 5px rgba(251, 189, 200, 0.4);
+          box-shadow: 0 0 15px 5px rgba(251, 189, 200, 0.4);
 }
 /*# sourceMappingURL=style.css.map */

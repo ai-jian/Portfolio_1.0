@@ -54,14 +54,14 @@ const follower = document.querySelector(".cursor-follower")
 const cursorScale = document.querySelectorAll(".app__cursor-scale")
 
 gsap.set('.app__cursor', { xPercent: -50, yPercent: -50 })
-gsap.set('.cursor-follower', { xPercent: -50, yPercent: -50 })
+// gsap.set('.cursor-follower', { xPercent: -50, yPercent: -50 })
 
 window.addEventListener('mousemove', (e) => {
     gsap.to(cursor, 0.2, { x: e.clientX, y: e.clientY })
     gsap.to(follower, 0.9, { x: e.clientX, y: e.clientY })
 })
 
-// cursorScale.classList.add('cursor-grow')
+cursorScale.classList.add('cursor-grow')
 
 cursorScale.forEach(link => {
     link.addEventListener('mousemove', () => {

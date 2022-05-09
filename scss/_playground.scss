@@ -3,26 +3,36 @@
     display: flex;
     flex-direction: column;
     color: color(primary);
+    align-items: center;
+    padding-top: 6rem;
 }
 .sketches {
     font-size: 1rem;
     min-height:100vh;
-    width:80%;
+    width:100%;
     display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(24em,1fr));
-    // grid-template-rows:repeat(auto-fit, minmax(2em,24em));
+    grid-template-columns:repeat(auto-fit, minmax(12em,15.5em));
+ 
     // gap:2rem;
     align-self: center;
-    
+    @include tablet {
+        width: 80%;  
+        grid-template-rows:repeat(auto-fit, minmax(2em,17em));
+
+    }
 }
 .sketch-wrapper {
     margin:1rem;
     width: 24em;
     height: fit-content;
     position:relative;
+    
+    transform: scale(.8);
     // border: 2px solid color(primary);
     // border-radius: 1rem;
- 
+    @include tablet {
+        transform: scale(.6);
+    }
     
     .sketch-canvas {
         position: relative;
@@ -36,14 +46,16 @@
         iframe {
             position: absolute;
             height:130%;
-            width:105%;
+            width:105.5%;
             top: -17.5%;
             left: -2.5%;
             overflow: hidden;
+            // filter: hue-rotate(90deg) ;
+            z-index: -1;
         }
     }
     .skill-tags{
-        font-size:.8em;
+        font-size:1.2em;
         font-weight: bold;
     }
     .sketch-links {
@@ -52,6 +64,7 @@
         bottom:0;
         .sketch-link{
         color: color(primary);
-        }   
+        margin: 0 .5em;
+        }
     }
 }

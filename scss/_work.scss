@@ -26,12 +26,15 @@
   justify-content: space-between;
   align-items: flex-start;
   font-size: 1rem;
+  padding:2rem;
+  border-radius:1rem;
   
   position:relative;
   left: 10%;
 
-  height: 32ch;
+  height: 42ch;
   width: 80%;
+  
   
   @include tablet {
     left:15%;
@@ -64,16 +67,17 @@
   .work-tag{
     font-weight: bold;
     color:color(primary);
+    position: relative;
   }
 
   //work links
   .swork-links {
-    position:absolute;
+    
     display: flex;
     gap: 1rem;
     left: 0;
-    bottom: -10%;
-    
+    bottom: 0%;
+    // padding: 0.5rem 0;
 
     .work-link {
       text-decoration: none;
@@ -81,8 +85,9 @@
     }
 
     @include tablet {
-      right: 0;
-      bottom: 0;
+      position:absolute;
+      right: 1.5rem;
+      bottom: 3ch;
       flex-direction: column;
       justify-content: space-between;
       align-items:flex-end;

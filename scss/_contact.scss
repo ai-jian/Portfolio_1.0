@@ -37,3 +37,14 @@
       }
   }
 }
+
+.contact-email {
+  color:color(primary);
+  font-weight:bold;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    // border-bottom: 2px solid color(primary);
+  }
+}

@@ -31,11 +31,61 @@ section {
   min-height: 100vh;
   width: 100%;
 }
+
 .title {
   text-align: center;
   color: color(primary);
   text-transform: uppercase;
+  text-align: center;
   font-weight: bold;
   font-size: 2rem;
+}
+
+//buttons
+.btn {
+  width:70%;
+  background-color: color(primary);
+  border:none;
+  border-radius: 2rem;
+  padding: .5rem 1.5rem;
+  transition: all .35s ease-in-out;
+  
+  a{
+    text-decoration: none;
+    color: color(white);
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: $font-comfortaa;
+    transition: all .35s ease-in-out;
+  }
+  
+  &:hover {
+    background-color: #fff;
+    box-shadow:0 0 15px 5px rgba(251, 189, 200, 0.4);
+    a{
+      color: color(primary);
+    }
+  }
+}
+
+
+// icons
+.social-icon i{
+  padding: .2rem;
+  border-radius: 1rem;
+  transition: all .35s ease-in-out;
+  &:hover{
+    box-shadow:0 0 15px 5px rgba(251, 189, 200, 0.4);
+  }
+}
+
+// light shadow
+
+.light-shadow {
+  transition: all 0.35s ease-in-out;
+
+  &:hover{
+      box-shadow:0 0 15px 5px rgba(251, 189, 200, 0.4);
+  }
 }
 
