@@ -419,6 +419,7 @@ header nav .toggled-btn {
 }
 
 #work {
+  margin-top: 10%;
   min-height: 100vh;
   width: 100vw;
   position: relative;
@@ -444,7 +445,11 @@ header nav .toggled-btn {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 40vh;
+  gap: 35vh;
+}
+
+.selected-works:first-child {
+  margin-top: 15%;
 }
 
 .swork-container {
@@ -621,7 +626,12 @@ header nav .toggled-btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 6rem;
+  padding-top: 4rem;
+}
+
+#playground h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
 .sketches {
@@ -630,8 +640,8 @@ header nav .toggled-btn {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(12em, 15.5em))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(12em, 15.5em));
+  -ms-grid-columns: (16em)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 16em);
   -ms-grid-row-align: center;
       align-self: center;
 }
@@ -727,6 +737,10 @@ header nav .toggled-btn {
     width: 50%;
     font-size: 1.3rem;
   }
+}
+
+#contact button {
+  width: 50%;
 }
 
 .icon-wrapper {
