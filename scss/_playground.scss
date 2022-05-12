@@ -4,7 +4,7 @@
     flex-direction: column;
     color: color(primary);
     align-items: center;
-    padding-top: 4rem;
+    padding-top: 8rem;
     h2 {
         font-size:2rem;
         text-transform: uppercase;
@@ -15,7 +15,7 @@
     min-height:100vh;
     width:100%;
     display: grid;
-    grid-template-columns:repeat(auto-fit, 16em);
+    grid-template-columns:repeat(auto-fit, minmax(15em, 17em));
  
     // gap:2rem;
     align-self: center;
@@ -33,7 +33,7 @@
     
     transform: scale(.8);
     // border: 2px solid color(primary);
-    // border-radius: 1rem;
+    border-radius: 1rem;
     @include tablet {
         transform: scale(.6);
     }

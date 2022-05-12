@@ -106,7 +106,7 @@
 // regular works
 .regular-works {
   margin-top: 30ch;
-  min-height:100vh;
+  min-height:fit-content;
   width:80%;
   display: grid;
   grid-template-columns:repeat(auto-fit, minmax(35ch,1fr));

@@ -320,7 +320,7 @@ header nav .toggled-btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Comfortaa", cursive;
+  font-family: "Comfortaa", serif;
   font-weight: bold;
   line-height: 1.5;
   position: relative;
@@ -547,7 +547,9 @@ header nav .toggled-btn {
 
 .regular-works {
   margin-top: 30ch;
-  min-height: 100vh;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   width: 80%;
   display: -ms-grid;
   display: grid;
@@ -626,7 +628,7 @@ header nav .toggled-btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 4rem;
+  padding-top: 8rem;
 }
 
 #playground h2 {
@@ -640,8 +642,8 @@ header nav .toggled-btn {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (16em)[auto-fit];
-      grid-template-columns: repeat(auto-fit, 16em);
+  -ms-grid-columns: (minmax(15em, 17em))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(15em, 17em));
   -ms-grid-row-align: center;
       align-self: center;
 }
@@ -663,6 +665,7 @@ header nav .toggled-btn {
   position: relative;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
+  border-radius: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -711,6 +714,7 @@ header nav .toggled-btn {
 }
 
 #contact {
+  padding-top: 10ch;
   color: #df798a;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -815,7 +819,7 @@ body,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: "Comfortaa", cursive;
+  font-family: "Comfortaa", serif;
   font-weight: lighter;
 }
 
@@ -848,7 +852,7 @@ section {
   color: #fff;
   font-size: 1.2rem;
   font-weight: bold;
-  font-family: "Comfortaa", cursive;
+  font-family: "Comfortaa", serif;
   -webkit-transition: all .35s ease-in-out;
   transition: all .35s ease-in-out;
 }
